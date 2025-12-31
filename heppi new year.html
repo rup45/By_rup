@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #E56AB3, #EF87BE, #ffe6f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Card */
+.card {
+    background: #ffe1e1;
+    width: 360px;
+    padding: 25px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 30px 50px rgba(255, 105, 180, 0.35);
+    animation: pop 1s ease;
+    position: relative;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+    color: #ff4f9a;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #ff85b3;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #d63384;
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+/* Bunny */
+.bunny {
+    margin: 10px auto 20px;
+    position: relative;
+    width: 140px;
+    height: 170px;
+    animation: jump 2.5s infinite;
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Ears */
+.ear {
+    width: 32px;
+    height: 75px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    animation: wiggle 2s infinite;
+}
+
+.ear.left { left: 32px; }
+.ear.right { right: 32px; animation-delay: 1s; }
+
+.ear::after {
+    content: "";
+    width: 14px;
+    height: 45px;
+    background: #ffc0d9;
+    border-radius: 50%;
+    position: absolute;
+    left: 9px;
+    top: 12px;
+}
+
+@keyframes wiggle {
+    0%,100% { transform: rotate(0); }
+    50% { transform: rotate(6deg); }
+}
+
+/* Face */
+.face {
+    background: #f2f2f2;
+    width: 110px;
+    height: 95px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Eyes (Blinking) */
+.eye {
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 50%;
+    position: absolute;
+    top: 38px;
+    animation: blink 4s infinite;
+}
+
+.eye.left { left: 32px; }
+.eye.right { right: 32px; }
+
+@keyframes blink {
+    0%, 95%, 100% { height: 10px; }
+    96%, 99% { height: 2px; }
+}
+
+/* Nose */
+.nose {
+    width: 12px;
+    height: 9px;
+    background: #ff7aa8;
+    border-radius: 50%;
+    position: absolute;
+    top: 52px;
+    left: 49px;
+}
+
+/* Arms */
+.arm {
+    width: 28px;
+    height: 18px;
+    background: #ffc0d9;
+    border-radius: 20px;
+    position: absolute;
+    top: 100px;
+}
+
+.arm.left { left: 15px; }
+.arm.right { right: 15px; }
+
+/* Heart */
+ {
+    width: 45px;
+    height: 40px;
+    background: #ff4f9a;
+    position: absolute;
+    top: 90px;
+    left: 47px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+
+.heart-hold::before {
+    top: -22px;
+    left: 0;
+}
+
+.heart-hold::after {
+    left: 22px;
+    top: 0;
+}
+
+/* Floating Hearts */
+.floating {
+    position: absolute;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    color: #ff69b4;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-700px); opacity: 0; }
+}
+
+.footer {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ff4f9a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🌹Happyi New Year</h1>
+    <h2>My Bestie 🌷</h2>
+
+    <div class="bunny">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+        </div>
+
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+
+        <div class="heart-hold"></div>
+        <div class="heart-text">💗</div>
+    </div>
+
+    <p>
+        New year, new things ✨<br>
+        Same us, forever 💕
+    </p>
+
+    <p>
+        Thank you for being my comfort<br> my madness my bestuuuuu<br> may this year bring us love, laughter & endless memories
+    </p>
+
+    <div class="footer">
+       💗 With all my love 💗
+    </div>
+</div>
+
+<span class="floating" style="left:10%; animation-delay:0s;">💗</span>
+<span class="floating" style="left:30%; animation-delay:1s;">💖</span>
+<span class="floating" style="left:50%; animation-delay:2s;">💕</span>
+<span class="floating" style="left:70%; animation-delay:3s;">💗</span>
+<span class="floating" style="left:90%; animation-delay:4s;">💖</span>
+
+<span class="floating">💗</span>
+<span class="floating star">✨</span>
+<span class="floating star">⭐</span>
+<span class="floating sparkle">✦</span>
+<span class="floating petal">🌸</span>
+<span class="floating bubble">○</span>
+
+</body>
+</html>
